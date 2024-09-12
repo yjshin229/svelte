@@ -1,12 +1,16 @@
 <script>
+  import { FeedbackStore } from '../stores';
   import Card from './Card.svelte';
   import { createEventDispatcher } from 'svelte';
   export let item;
 
-  const dispatch = createEventDispatcher();
+  // const dispatch = createEventDispatcher();
 
   const handleDelete = (itemId) => {
-    dispatch('delete-feedback', itemId);
+    // dispatch('delete-feedback', itemId);
+    FeedbackStore.update((currentFeedback) => {
+      return currentFeedback.filter((item) => item.id !== itemId);
+    });
   };
 </script>
 
@@ -14,10 +18,7 @@
   <div class="num-display">
     {item.rating}
   </div>
-  <button
-    class="close"
-    on:click={() => handleDelete(item.id)}>X</button
-  >
+  <button class="close" on:click={() => handleDelete(item.id)}>X</button>
   <p class="text-display">
     {item.text}
   </p>

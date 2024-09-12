@@ -1,14 +1,15 @@
 {
-  "plugins": ["prettier-plugin-svelte"],
-  "overrides": [
-    {
-      "files": "*.svelte",
-      "options": {
-        "parser": "svelte"
-      }
-    }
-  ],
-  "printWidth": 100,
-  "singleQuote": true,
-  "svelteBracketNewLine": true
+    "plugins": ["prettier-plugin-svelte"],
+    "overrides": [
+        {
+            "files": "*.svelte",
+            "options": {
+                "parser": "svelte"
+            }
+        }
+    ],
+    "printWidth": 100,
+    "singleQuote": true,
+    "svelteBracketNewLine": true,
+    "tabWidth": 2
 }
