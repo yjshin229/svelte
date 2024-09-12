@@ -1,4 +1,31 @@
-/node_modules/
-/public/build/
+# Node modules
+node_modules/
 
+# Build output
+public/build/
+
+# SvelteKit output (if using SvelteKit)
+.svelte-kit/
+build/
+
+# Cache directories
+.cache/
+.vscode/
+.idea/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# MacOS
 .DS_Store
+
+# IDE Specific
+*.swp
+*.swo
